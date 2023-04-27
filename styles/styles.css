@@ -12028,7 +12028,6 @@ textarea.form-control-lg {
   }
 }
 body {
-  background-color: #1f1f1f;
   font-size: 16pt;
   overflow-x: hidden;
   width: 100vw;
@@ -12047,12 +12046,13 @@ body::-webkit-scrollbar {
   height: 100%;
   z-index: 50;
   opacity: 1;
-  background: #1f1f1f;
-  transition: opacity 1s ease-out;
+  background: black;
+  transition: opacity 2s ease-in-out;
 }
-.spinner-wrapper .spinner-grow {
-  width: 6rem;
-  height: 6rem;
+.spinner-wrapper .spinner-border {
+  width: 5rem;
+  height: 5rem;
+  filter: blur(1px);
 }
 
 .carousel {
@@ -12104,28 +12104,29 @@ div.landing div.imgctn a img {
   margin: auto;
   width: 100px;
   filter: opacity(0.5);
+  rotate: 360deg;
+  transition: rotate 60s ease-in-out;
 }
 div.landing div.imgctn a:hover img {
-  rotate: 25deg;
+  rotate: 360deg;
   transform: scale(1.4);
   filter: opacity(1);
-  transition: rotate 2s ease-in-out, transform 2s ease-in-out, filter 3s ease-in-out;
+  transition: rotate 10s ease-in-out, transform 2s ease-in-out, filter 3s ease-in-out;
 }
 div.landing div.imgctn a:not(hover) img {
-  rotate: -25deg;
+  rotate: -360deg;
   transform: scale(1.1);
   filter: opacity(0.5);
-  transition: rotate 3s ease-in-out, transform 1s ease-in-out, filter 1s ease-in-out;
+  transition: rotate 3s ease-out, transform 1s ease-in-out, filter 1s ease-in-out;
 }
 
 nav {
   height: 48px;
-  background: #212529;
   z-index: 15;
   color: #fff;
 }
 nav .container-fluid, nav .container-sm, nav .container-md, nav .container-lg, nav .container-xl, nav .container-xxl {
-  background-color: #212529;
+  background: #000;
 }
 nav .navbar-brand {
   font-family: "Be Vietnam Pro", sans-serif;
@@ -12138,14 +12139,22 @@ nav #navbarNav li {
   padding: 0 4rem;
 }
 nav #navbarNav li a {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-shadow: none;
 }
 nav #navbarNav li a:hover {
-  transition: text-shadow 1s;
+  text-shadow: #fff;
+  color: aqua;
+  transition: text-shadow 1s, color 0.5s ease-in;
 }
 
 main {
   height: calc(100vh - 48px);
+}
+
+main.grid {
+  height: auto;
+  background: #000;
 }
 
 div.home {
@@ -12170,9 +12179,9 @@ div.home h2, div.home .h2 {
   letter-spacing: 3rem;
   overflow-wrap: break-word;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 3rem;
   background: none;
-  opacity: 0.5;
+  opacity: 0.3;
 }
 div.home .sectiona {
   background: #1f1f1f center/cover url(../assets/bands/convert/image_07.webp) no-repeat;
@@ -12181,7 +12190,8 @@ div.home .sectiona {
   width: 50%;
 }
 div.home .sectiona h2, div.home .sectiona .h2 {
-  margin-right: 4rem;
+  margin-right: 3rem;
+  padding-left: 5rem;
 }
 div.home .sectionb {
   background: #1f1f1f center/cover url(../assets/portraits/convert/image_01.webp) no-repeat;
@@ -12190,6 +12200,9 @@ div.home .sectionb {
   padding-left: 2rem;
   margin: 0;
   width: 50%;
+}
+div.home .sectionb h2, div.home .sectionb .h2 {
+  padding-left: 10rem;
 }
 
 .grid,
