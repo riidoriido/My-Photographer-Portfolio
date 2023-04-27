@@ -8,9 +8,15 @@
     <meta name="description" content="Portfolio Prueba Fotografia" />
     <link rel="stylesheet" href="/styles/styles.css" />
   </head>
+
   <body>
+    <div class="spinner-wrapper">
+      <div class="spinner-grow text-light" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
     <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="/index.html">riidosnap</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,6 +38,7 @@
         </div>
       </nav>
     </header>
+
     <main class="grid">
       <div class="row" data-masonry='{"percentPosition": true }' style="position: relative; height: 690px">
         <div class="col-sm-6 col-lg-4 card-container" style="position: absolute; left: 66.6667%; top: 0px">
@@ -129,6 +136,8 @@
       </div>
     </main>
   </body>
+  <script src="./scripts/onLoad.js"></script>
   <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-  <script async="" src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"></script>
+  <script async src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"></script>
+  <script src="./node_modules/imagesloaded/imagesloaded.pkgd.min.js"></script>
 </html>
